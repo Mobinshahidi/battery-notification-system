@@ -40,7 +40,7 @@ check_battery() {
     
     echo "Current status: $status, Capacity: $capacity"
     
-    if [ "$status" = "Charging" ] && [ "$capacity" = "100" ]; then
+    if (([ "$status" = "Charging" ] || [ "$status" = "Full" ]) && [ "$capacity" = "100" ]); then
         return 0
     else
         return 1
