@@ -1,0 +1,2 @@
+SUBSYSTEM=="power_supply", ACTION=="change", \
+RUN+="/bin/su -c '/usr/local/bin/power_handler.sh' - $SUDO_USER"

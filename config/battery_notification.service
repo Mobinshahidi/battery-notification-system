@@ -1,0 +1,13 @@
+[Unit]
+Description=Battery Notification Service
+After=graphical-session.target
+
+[Service]
+Type=simple
+Environment="DISPLAY=:0"
+Environment="XAUTHORITY=%h/.Xauthority"
+ExecStart=/usr/local/bin/battery_notification.sh
+Restart=no
+
+[Install]
+WantedBy=default.target
